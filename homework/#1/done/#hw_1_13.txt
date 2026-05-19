@@ -1,0 +1,25 @@
+/cost:
+"""
+  Total cost:            $0.1338
+  Total duration (API):  1m 15s
+  Total duration (wall): 25m 50s
+  Total code changes:    22 lines added, 0 lines removed
+  Usage by model:             
+     claude-sonnet-4-6:  9 input, 2.1k output, 153.8k cache read, 15.0k cache write ($0.1333)
+      claude-haiku-4-5:  437 input, 11 output, 0 cache read, 0 cache write ($0.0005)
+"""
+Calculation:
+"""
+input:       9 × $3    / 1M = $0.000027
+output:    2100 × $15   / 1M = $0.0315
+cache write: 15000 × $3.75 / 1M = $0.0563
+cache read: 153800 × $0.30 / 1M = $0.0461
+= $0.000027 + $0.0315 + $0.0563 + $0.0461 = $0.1339
+"""
+
+
+cache read  → $0.0461  (32%)
+cache write → $0.0563  (40%)
+output      → $0.0315  (22%)
+input       → $0.000   (~0%)
+Кешування їсть 72% бюджету сесії — але без нього було б набагато дорожче, бо 153k токенів читання за повною ціною = $0.46.
